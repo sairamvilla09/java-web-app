@@ -7,12 +7,6 @@ pipeline {
     }
 
     stages {
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/sairamvilla09/java-web-app.git'
-            }
-        }
-
         stage('Build') {
             steps {
                 sh 'mvn clean install'
@@ -32,4 +26,3 @@ pipeline {
         }
     }
 }
-
